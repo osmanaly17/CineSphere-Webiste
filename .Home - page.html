@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSphere</title>
+    <style>
+        body {
+            background-color:  rgb(20, 18, 18); /* Dark Grey */
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header img {
+            max-width: 100%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        #banner-section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+       
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        .banner {
+            width: 100%;
+            display: none;
+        }
+
+        .banner-buttons {
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .banner-button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .banner-button:hover {
+            background-color: #ccc;
+            height: 12px;
+            width: 12px;
+        }
+
+        #now-playing, #upcoming {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .movie-section {
+            width: 48%;
+            margin-right: 20px;
+        }
+
+        #now-playing img,
+        #upcoming img {
+            margin-right: 10px; 
+            height: 100px;
+            max-width: 100%;
+            object-fit: cover; 
+            width: 100px;
+            height: 150px;
+        }
+        h2{
+            margin-left: 37px;
+        }
+       h5{
+
+    margin-left: 550px;
+    margin-bottom: -15px;
+       }
+
+
+        .genre-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        
+        }
+
+        .genre-tab {
+            padding: 8px;
+            background-color: #555;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+           
+        }
+
+        .genre-tab:hover {
+            background-color: #777;
+        }
+
+        /* Style for buttons */
+        button {
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Register button style */
+        #register-button {
+            background-color: #800000; /* Maroon */
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        /* Sign In button style */
+        #signin-button {
+            color: #ffffff; /* Maroon */
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid #800000; /* Maroon */
+        }
+
+        #signin-button:hover {
+            background-color: #800000;
+            color: #fff;
+        }
+
+        .genre-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 3em;
+            padding: 10px;
+            float: right;
+            flex-wrap: wrap;
+            margin-top: -29%;
+            width: 100% 100%;
+            flex-wrap: wrap;
+            width: 30%;
+            
+        }
+
+        .genre-button {
+            width: 150px;
+            height: 90px;
+            flex-shrink: 0;
+            background-color: #555; /* Grey  clor bg*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 50px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .genre-icon {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+
+        .genre-text {
+            width: 100px;
+            height: 30px;
+            flex-shrink: 0;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+
+
+
+
+        footer {
+            width: 100%;
+            background-color:  rgb(20, 18, 18);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-line {
+            width: 70%;
+            height: 2px;
+            background-color: #fff;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .footer-links {
+            text-align: left;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .footer-text {
+            text-align: right;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    
+    <header>
+        <img src="sinesphere_-_logo-bgl.png" alt="Logo" style="height: 80px; width: 150px;">
+        <nav>
+            
+            <a href=".Home - page.html" target="_blank">HOME</a>
+            <a href=".Playing Now.html" target="_blank">MOVIES</a>
+            <a href=".Seat selection.html" target="_blank">BOOK</a>
+            <a href=".Register page.html" target="_blank">MEMBERSHIP</a>
+            <a href=".Special Screening Page.html" target="_blank">SCREENING</a>
+            <a href=".Contact Us.html" target="_blank">CONTACT US</a>
+            <a href=".About Us.html" target="_blank">ABOUT</a>
+          
+        </nav>
+        <div>
+            <button id="register-button">Register</button>
+            <button id="signin-button">Sign In</button>
+        </div>
+    </header>
+
+
+
+
+
+
+
+   
+
+    <div id="banner-section" style="width: 80%; justify-content: center; margin-left: 130px;">
+        <img class="banner" src="banner (1).jpg" alt="Banner 1">
+        <img class="banner" src="banner (1).png" alt="Banner 2">
+        <img class="banner" src="banner (2).jpg" alt="Banner 3">
+        <img class="banner" src="banner (2).png" alt="Banner 4">
+        <img class="banner" src="banner (3).jpg" alt="Banner 5">
+        <div class="banner-buttons">
+            <div class="banner-button" onclick="currentBanner(1)"></div>
+            <div class="banner-button" onclick="currentBanner(2)"></div>
+            <div class="banner-button" onclick="currentBanner(3)"></div>
+            <div class="banner-button" onclick="currentBanner(4)"></div>
+            <div class="banner-button" onclick="currentBanner(5)"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<div class="movies" width="50%" style="margin-left: 100px;">
+    <h2>Now Playing</h2>
+    <h5><a href=".Playing Now.html" target="_blank" style="text-decoration: none; color: #ffffff;">See all</a></h5>
+    <div id="now-playing" class="movie-section">
+       
+        <div>
+            <a href=".nysm.html" target="_blank">
+                <img src="playing (1).jpg" alt="movie 1 playing">
+            </a>
+            
+            <a href=".bluebeetle.html" target="_blank">
+                <img src="playing (2).jpg" alt="movie 2 playing">
+            </a>
+            <a href=".eot.html" target="_blank">
+                <img src="playing (3).jpg" alt="movie 3 playing">
+            </a>
+            <a href=".maula jatt movie.html" target="_blank">
+                <img src="playing (4).jpg" alt="movie 4 playing">
+            </a>
+            <a href=".ff.html" target="_blank">
+                <img src="playing (5).jpg" alt="movie 5 playing">
+            </a>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    <h2 style="margin-bottom: 5px;">Upcoming</h2>
+    <h5><a href=".Upcoming.html" target="_blank" style="text-decoration: none; color: #ffffff;">See all</a></h5>
+    <div id="upcoming" class="movie-section">
+        
+        <div>
+            <a href=".3 bahadur.html" target="_blank">
+                <img src="up coming (1).jpg" alt="movie 1 playing">
+            </a>
+            <a href=".fatih1453.html" target="_blank">
+                <img src="up coming (2).jpg" alt="movie 2 upcoming">
+            </a>
+            <a href=".gunjal.html" target="_blank">
+                <img src="up coming (3).jpg" alt="movie 3 upcoming">
+            </a>
+            <a href=".ipman.html" target="_blank">
+                <img src="up coming (4).jpg" alt="movie 4 upcoming">
+            </a>
+            <a href=".galad.html" target="_blank">
+                <img src="up coming (5).jpg" alt="movie 5 upcoming">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="genre-buttons" style="margin-right: 100px; margin-top: -435px;">
+    <a href=".Comedy.html" class="genre-button" target="_blank">
+        <div class="genre-icon" style="background-image: url('comedy.png');"></div>
+        <div class="genre-text" >Comedy</div>
+    </a>
+    <a href=".Horror.html" class="genre-button" target="_blank">
+        <div class="genre-icon" style="background-image: url('ghosts.png');"></div>
+        <div class="genre-text">Horror</div>
+    </a>
+    <a href=".Thriller.html" class="genre-button" target="_blank">
+        <div class="genre-icon" style="background-image: url('detective-story.png');"></div>
+        <div class="genre-text">Thriller</div>
+    </a>
+    <a href=".Adventure.html" class="genre-button" target="_blank">
+        <div class="genre-icon" style="background-image: url('adventurer.png');"></div>
+        <div class="genre-text">Adventure</div>
+    </a>
+    <a href=".Action.html" class="genre-button" target="_blank">
+        <div class="genre-icon" style="background-image: url('spy.png');"></div>
+        <div class="genre-text">Action</div>
+    </a>
+    <a href=".Romance.html" class="genre-button" target="_blank">
+        <div class="genre-icon" style="background-image: url('hearts.png');"></div>
+        <div class="genre-text">Romance</div>
+    </a>
+</div>
+
+
+
+
+
+
+  
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-links" style="margin-left: 200px;">
+                <a href=".tcs.html" target="_blank">Terms & Conditions | 
+                    </a>
+                    <a href=".qas.html" target="_blank">FAQs</a>
+            </div>
+            <div class="footer-text" style="margin-right: 200px;">
+                Copyrights © 2023 | CineSphere Pvt. Ltd.
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let currentBannerIndex = 0;
+        const banners = document.querySelectorAll('.banner');
+
+        function showBanner(index) {
+            banners.forEach(banner => banner.style.display = 'none');
+            banners[index].style.display = 'block';
+        }
+
+        function currentBanner(index) {
+            currentBannerIndex = index - 1;
+            showBanner
+(currentBannerIndex);
+        }
+
+        function nextBanner() {
+            currentBannerIndex = (currentBannerIndex + 1) % banners.length;
+            showBanner(currentBannerIndex);
+        }
+
+        // Start slideshow
+        setInterval(nextBanner, 3000); // Change slide every 3 seconds
+
+        function navigateToGenre(genre) {
+            console.log('Navigating to ' + genre + ' genre...');
+            // Replace the console.log statement with the actual navigation logic.
+        }
+    </script>
+</body>
+</html>

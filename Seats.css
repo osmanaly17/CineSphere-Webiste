@@ -1,0 +1,64 @@
+.poster {
+    background: url(BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99.7%;
+    height: 500px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+}
+.seats {
+    background-color: black;
+    background-size: cover;
+    width: 99.7%;
+    height: 100%;
+    border-color: black;
+    border-style: solid;
+}
+.block1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    margin: 10% 15% 4% 15%;
+    justify-content: space-around;
+    row-gap: 1em;
+
+}
+.block2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    margin: 3% 5% 3% 7%;
+    justify-content: space-around;
+
+}
+.block3{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    margin: 5% 5% 2% 7%;
+    justify-content: space-around;
+    
+
+}
+.block4{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    margin: 3% 20% 2% 20%;
+    justify-content: space-around;
+    
+
+}
+.alphabet{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.numbers{
+    display: flex;
+    gap: 5em;
+    margin: 2% 7% 2% 9%;
+    justify-content: space-around;
+}

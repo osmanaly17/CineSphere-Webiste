@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSphere</title>
+    <style>
+          body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(20, 18, 18);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 100%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    #register-button {
+      background-color: transparent;
+      color: #fff;
+      padding: 10px 20px;
+      border: 2px solid #800000; /* Maroon */
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #signin-button {
+      color: #fff;
+      padding: 10px 20px;
+      background-color: #800000; /* Maroon */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .stroke-button:hover {
+      background-color: #800000; /* Maroon */
+      color: #fff;
+    }
+
+    .fill-button:hover {
+      background-color: #ccc;
+    }
+
+  
+        .movie-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+
+        .movie-container select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: 0;
+            padding: 5px 15px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            background-color: #17a2b8;
+            color: #fff;
+        }
+
+        .container {
+            perspective: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .seat {
+            background-color: #17a2b8;
+            height: 30px;
+            width: 30px;
+            margin: 5px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .seat .inner-seat {
+            background-color: white;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+
+        .seat:not(.occupied):hover .inner-seat {
+            background-color: #127482;
+        }
+
+        .occupied .inner-seat {
+            background-color: #dc3545;
+        }
+
+        .selected .inner-seat {
+            background-color: white;
+            border: 2px solid #28a745;
+        }
+
+        .seat:nth-child(2):not(.occupied) {
+            margin-left: 0;
+        }
+
+        .seat:nth-last-child(2):not(.occupied) {
+            margin-right: 0;
+        }
+
+        .screen {
+            background: #fff;
+            height: 15px;
+            width: 80%;
+            margin: 15px 0;
+            transform: rotateX(-45deg);
+            box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .row-number {
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+        }
+
+        .column-number {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        p.text {
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        p.text span {
+            color: #17a2b8;
+            font-weight: 600;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgb(20, 18, 18);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-line {
+            width: 70%;
+            height: 2px;
+            background-color: #fff;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .footer-links {
+            text-align: left;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .footer-text {
+            text-align: right;
+        }
+
+
+
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .row:not(:last-child) .seat {
+            margin-right: 10px;
+        }
+
+        .seat:nth-child(8) {
+            margin-right: 20px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .row:not(:last-child) .seat {
+            margin-right: 10px;
+        }
+
+        .seat:nth-child(8) {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="sinesphere_-_logo-bgl.png" alt="Logo" style="height: 80px; width: 150px;">
+        <nav>
+            
+            <a href=".Home - page.html" target="_blank">HOME</a>
+            <a href=".Playing Now.html" target="_blank">MOVIES</a>
+            <a href=".Seat selection.html" target="_blank">BOOK</a>
+            <a href=".Register page.html" target="_blank">MEMBERSHIP</a>
+            <a href=".Special Screening Page.html" target="_blank">SCREENING</a>
+            <a href=".Contact Us.html" target="_blank">CONTACT US</a>
+            <a href=".About Us.html" target="_blank">ABOUT</a>
+          
+        </nav>
+        <div>
+            <button id="register-button">Register</button>
+            <button id="signin-button">Sign In</button>
+        </div>
+    </header>
+    
+
+
+
+<img src="Collage.jpg" alt="bg" >
+
+
+
+
+
+
+
+    <div class="movie-container">
+        <label>Pick a movie: </label>
+        <select id="movie">
+            <option value="1600">Maula Jatt (Rs. 1600)</option>
+            <option value="750">Fyre Fraud (Rs. 750)</option>
+            <option value="500">Now You See Me (Rs. 500)</option>
+            <option value="1600">Edge of Tomorrow (Rs. 1600)</option>
+            <option value="750">Blue Beetle (Rs. 750)</option>
+        </select>
+
+        <div class="container">
+            <div class="screen"></div>
+        </div>
+        <p class="text">You have selected <span id="count">0</span> seats for the total price of Rs. <span
+                id="total">0</span></p>
+        <!-- Display selected seats -->
+        <p id="selected-seats" class="text"></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        const seatData = [
+            // First two rows with 8 seats
+            ['A1', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A10'],
+            ['B1', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B10'],
+            // Rows C-G with 10 seats
+            ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10'],
+            ['D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'D9', 'D10'],
+            ['E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9', 'E10'],
+            ['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10'],
+            ['G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8', 'G9', 'G10'],
+        ];
+
+        function initializeSeats() {
+            const seatContainer = document.querySelector('.container');
+            const countElement = document.getElementById('count');
+            const totalElement = document.getElementById('total');
+            const selectedSeatsInfo = document.getElementById('selected-seats');
+            let selectedSeatsCount = 0;
+            let total = 0;
+
+            seatData.forEach((row, rowIndex) => {
+                const seatRow = document.createElement('div');
+                seatRow.classList.add('row');
+
+                row.forEach((seatId, columnIndex) => {
+                    const seatElement = document.createElement('div');
+                    seatElement.classList.add('seat');
+                    seatElement.setAttribute('data-seat-id', seatId);
+
+                    const innerSeat = document.createElement('div');
+                    innerSeat.classList.add('inner-seat');
+                    seatElement.appendChild(innerSeat);
+
+                    if (seatId.includes('A') || seatId.includes('B')) {
+                        seatElement.style.marginLeft = '5px';
+                        seatElement.style.marginRight = '5px';
+                    }
+
+                    seatElement.addEventListener('click', onSeatClick);
+                    seatRow.appendChild(seatElement);
+
+                    if (columnIndex === 0) {
+                        const rowNumber = document.createElement('div');
+                        rowNumber.classList.add('row-number');
+                        rowNumber.innerText = rowIndex + 1;
+                        seatElement.appendChild(rowNumber);
+                    }
+                });
+
+                seatContainer.appendChild(seatRow);
+            });
+
+            const columnNumbers = document.createElement('div');
+            columnNumbers.classList.add('row', 'column-number');
+
+            seatData[0].forEach((_, index) => {
+                const columnNumber = document.createElement('div');
+                columnNumber.innerText = index + 1;
+                columnNumbers.appendChild(columnNumber);
+            });
+
+            seatContainer.appendChild(columnNumbers);
+
+            const totalSeats = seatData.flat();
+            const bookedSeats = [...totalSeats].sort(() => 0.5 - Math.random()).slice(0, totalSeats.length / 2);
+
+            totalSeats.forEach(seatId => {
+                const seatElement = document.querySelector(`.seat[data-seat-id="${seatId}"]`);
+                if (bookedSeats.includes(seatId)) {
+                    seatElement.classList.add('occupied');
+                }
+            });
+
+            function onSeatClick() {
+                const seatElement = this;
+
+                if (seatElement.classList.contains('occupied')) {
+                    alert('This seat is already booked!');
+                } else {
+                    seatElement.classList.toggle('selected');
+
+                    if (seatElement.classList.contains('selected')) {
+                        selectedSeatsCount++;
+                        total += +document.getElementById('movie').value;
+                    } else {
+                        selectedSeatsCount--;
+                        total -= +document.getElementById('movie').value;
+                    }
+
+                    countElement.innerText = selectedSeatsCount;
+                    totalElement.innerText = total;
+
+                    // Update selected seats display
+                    const selectedSeats = document.querySelectorAll('.selected');
+                    const selectedSeatsList = Array.from(selectedSeats).map(seat => seat.dataset.seatId);
+                    const selectedSeatsDisplay = selectedSeatsList.join(', ');
+
+                    // Display selected seats
+                    selectedSeatsInfo.innerText = `Selected Seats: ${selectedSeatsDisplay}`;
+                }
+            }
+        }
+
+        window.onload = initializeSeats;
+    </script>
+
+  
+
+<footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+        <div class="footer-links" style="margin-left: 200px;">
+            <a href=".tcs.html" target="_blank">Terms & Conditions | 
+                </a>
+                <a href=".qas.html" target="_blank">FAQs</a>
+        </div>
+        <div class="footer-text" style="margin-right: 200px;">
+            Copyrights © 2023 | CineSphere Pvt. Ltd.
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

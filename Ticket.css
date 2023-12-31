@@ -1,0 +1,206 @@
+.poster {
+    background: url(BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99.7%;
+    height: 500px;
+    border-color: rgb(6, 6, 6);
+    border-style: solid;
+}
+.forms {
+    background-color: black;
+    background-size: cover;
+    width: 99.7%;
+    height: 800px;
+    border-color: black;
+    border-style: solid;
+}
+h2 {
+    padding-left: 9.5%;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    text-decoration: solid;
+}
+hr {
+    padding-left: 20px;
+    width: 80%;
+    align-self: center;
+    border-top: 5px;
+    background-color: white;
+    height: 5px;
+    margin-top: .2%;
+    border-radius: 50px;
+}
+.personal {
+    text-transform: capitalize;
+    padding-left: 30%;
+    font-size: 20px;
+    margin: 1%;
+    
+}
+input[type='text'],
+textarea{
+    width: 29.8%;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 7px;
+    
+}
+input[type='phone'],
+textarea{
+    width: 29.67%;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 7px;
+    margin-left: 5px;
+}
+input[type='email'],
+textarea{
+    width: 29.8%;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 7px;
+}
+.personal label{
+    padding-right: 50px;
+}
+.payment{
+    background-color: rgb(67, 65, 65);
+    width: 73%;
+    height: 335px;
+    margin: 2% 20% 2% 14%;
+    border: 2px none;
+    border-radius: 40px;
+}
+.payment h2 {
+    padding: 2%;
+
+}
+#ticket-price{
+    padding: 0px;
+    float: right;
+    width: 200px;
+    height: 250px;
+    border: none;
+    border-radius: 4px;
+    margin-top: -300px;
+    margin-right: 58px;
+}
+.pay{
+    padding-left: 0px;
+    margin: 5px 3px 80px 80px;
+    width: 300px;
+    height: 200px;
+    margin-left: 10%;
+    
+}
+input[type='Cvv'],
+textarea{
+    float: right;
+    width: 50px;
+    height: 34px;
+    margin-top: -51px;
+    margin-right: -9px;
+}
+input[type='lname'],
+textarea{
+    float: right;
+    width: 140px;
+    height: 36px;
+    padding: 0%;
+    margin-right: 170px;
+}
+input[type='fname'],
+textarea{
+    float: right;
+    width: 156px;
+    height: 35px;
+    padding: 0%;
+    margin-right: -10px;
+    margin-top: -15px;
+}
+input[type='number'],
+textarea{
+    float: right;
+    width: 227px;
+    height: 36px;
+    padding: 0%;
+    margin-right: 83px;
+    margin-top: -15px;
+}
+
+input[type='Date'],
+textarea{
+    float: right;
+    width: 52px;
+    height: 34px;
+    margin-top: 7px;
+    margin-right: -9px;
+}
+
+.plus{
+    padding-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#ticket-price hr{
+    width: 54%;
+    padding-left: 0%;
+    margin-left: 7%;
+}
+#ticket-price p{
+    word-spacing: 52px;
+}
+.vertical-line{
+    background-color: white;
+    width: 5px;
+    height: 170px;
+    float: right;
+    margin-top: -272px;
+    margin-right: 305px;
+    border-radius: 50px;
+}
+.vertical-line1{
+    background-color: white;
+    width: 5px;
+    height: 170px;
+    float: right;
+    margin-top: -140px;
+    margin-right: -122px;
+    border-radius: 50px;
+}
+#lname{
+    margin-top: -53px;
+
+}
+#fname{
+    padding-left: 0px;
+}
+#cardum{
+    margin-top: 50px;
+}
+#paymage{
+    margin-left: 445px;
+    height: 288px;
+    margin-top: -235px;
+    width: 510px;
+}
+button{
+    width: 233px;
+    height: 36px;
+    margin:2% 2% 2% -5%;
+    border: none;
+    border-radius: 2px;
+    background-color: #800000;
+    padding-left: 20px;
+    color: white;
+}
+button:hover{
+    background: #870000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}

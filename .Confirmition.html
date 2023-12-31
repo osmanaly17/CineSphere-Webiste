@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <title>Movie Ticket Purchase Confirmation</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(20, 18, 18);
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .image-container {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .paymentinfo {
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+        .process-bar-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .process-bar-step {
+            width: 25%;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .process-bar-step.active {
+            color: #800000; /* Maroon */
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333; /* Dark background color */
+            color: #fff;
+        }
+
+        header img {
+            max-width: 100%;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        #register-button {
+            background-color: transparent;
+            color: #fff;
+            padding: 10px 20px;
+            border: 2px solid #800000; /* Maroon */
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #signin-button {
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #800000; /* Maroon */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #800000; /* Maroon */
+        }
+
+        .btn:hover {
+            background-color: #800000; /* Maroon */
+            color: #fff;
+        }
+
+        /* Footer styles */
+        
+
+        footer {
+            width: 100%;
+            background-color:  rgb(20, 18, 18);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-line {
+            width: 70%;
+            height: 2px;
+            background-color: #fff;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .footer-links {
+            text-align: left;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .footer-text {
+            text-align: right;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <img src="sinesphere_-_logo-bgl.png" alt="Logo" style="height: 80px; width: 150px;">
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">MOVIES</a>
+        <a href="#">BOOK</a>
+        <a href="#">MEMBERSHIP</a>
+        <a href="#">SCREENING</a>
+        <a href="#">CONTACT US</a>
+        <a href="#">ABOUT</a>
+        <a href="#">Search</a>
+    </nav>
+    <div>
+        <button id="register-button">Register</button>
+        <button class="btn btn-primary" id="signin-button">Sign In</button>
+    </div>
+</header>
+
+<div class="image-container">
+    <img src="BG.jpg" class="img-fluid" alt="Movie Poster" style="max-height: 35%; height: 25%;">
+</div>
+
+<div class="container-fluid process-bar-container">
+    <div class="process-bar-step"><b>Movie</b></div>
+    <div class="process-bar-step"><b>Seat</b></div>
+    <div class="process-bar-step"><b>Payment</div>
+    <div class="process-bar-step active">Confirmation</div>
+</div>
+
+<hr>
+
+<div class="image-container">
+    <img src="success payment.jpg" class="img-fluid" alt="Success Payment Image">
+    <p class="paymentinfo"><b>Thank you, your payment has been<br> received. You will shortly receive an email <br>with a digital QR code that you can provide<br> while entering the movie hall</b></p>
+</div>
+
+<!-- Provided Footer -->
+<footer>
+    <div class="footer-line"></div>
+    <div class="footer-content">
+        <div class="footer-links" style="margin-left: 200px;">
+            <a href="#">Terms & Conditions | 
+                </a>
+                <a href="#">FAQs</a>
+        </div>
+        <div class="footer-text" style="margin-right: 200px;">
+            Copyrights © 2023 | CineSphere Pvt. Ltd.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and Popper.js CDN for button functionality -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-GLhlTQ8iKJEcdtu0I63s//Tt2uO+MzbLJq5i6T9LQFfRgkg1OfQusvfaBL5pdj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></script>
+
+</body>
+</html>
