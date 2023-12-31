@@ -7,6 +7,32 @@
     border-color: rgb(6, 6, 6);
     border-style: solid;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(20,18,18);
+}
+
+header img {
+    max-width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgb(20,18,18);
+}
+
+nav a {
+    color: rgb(255, 255, 255)
+    text-decoration: none;
+    margin: 0 15px;
+
+}
 .forms {
     background-color: black;
     background-size: cover;
@@ -181,6 +207,32 @@ textarea{
 #cardum{
     margin-top: 50px;
 }
+ /* Style for buttons */
+ button {
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Register button style */
+#register-button {
+    background-color: #800000; /* Maroon */
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/* Sign In button style */
+#signin-button {
+    color: #ffffff; /* Maroon */
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #800000; /* Maroon */
+}
+
+#signin-button:hover {
+    background-color: #800000;
+    color: #fff;
+}
 #paymage{
     margin-left: 445px;
     height: 288px;
@@ -204,3 +256,44 @@ button:hover{
     
 
 }
+
+
+
+footer {
+    width: 100%;
+    background-color:  rgb(20, 18, 18);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-line {
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.footer-text {
+    text-align: right;
+}
+
+
