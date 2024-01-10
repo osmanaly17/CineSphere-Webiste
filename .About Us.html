@@ -141,23 +141,47 @@
             margin: 0 15px;
         }
 
-        /* Bootstrap button styling */
-        .btn {
-            color: #fff;
-            border: 2px solid #800000; /* Maroon */
+        /* Style for buttons */
+        button {
+            font-size: 16px;
+            cursor: pointer;
             border-radius: 5px;
+        }
+
+        /* Register button style */
+        #register-button {
+            background-color: #800000; /* Maroon */
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        /* Sign In button style */
+        #signin-button {
+            color: #ffffff; /* Maroon */
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid #800000; /* Maroon */
+        }
+
+        #signin-button:hover {
+            background-color: #800000;
+            color: #fff;
+        }
+
+        .resume-button {
+            background-color: #800000; /* Maroon */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
             cursor: pointer;
         }
 
-        .btn-primary {
-            background-color: #800000; /* Maroon */
+        .resume-button:hover {
+            background-color: #600000; /* Darker Maroon on hover */
         }
 
-        /* Button hover effect */
-        .btn:hover {
-            background-color: #800000; /* Maroon */
-            color: #fff;
-        }
     </style>
 </head>
 <body>
@@ -166,7 +190,6 @@
 <header>
     <img src="sinesphere_-_logo-bgl.png" alt="Logo" style="height: 80px; width: 150px;">
     <nav>
-        
         <a href="index.html" target="_blank">HOME</a>
         <a href=".Playing Now.html" target="_blank">MOVIES</a>
         <a href=".Seat selection.html" target="_blank">BOOK</a>
@@ -174,11 +197,14 @@
         <a href=".Special Screening Page.html" target="_blank">SCREENING</a>
         <a href=".Contact Us.html" target="_blank">CONTACT US</a>
         <a href=".About Us.html" target="_blank">ABOUT</a>
-      
     </nav>
     <div>
-        <button id="register-button">Register</button>
-        <button id="signin-button">Sign In</button>
+        <a href=".signup.html" target="_blank">
+            <button id="register-button">Register</button>
+        </a>
+        <a href=".login.html" target="_blank">
+            <button id="signin-button">Sign In</button>
+        </a>
     </div>
 </header>
 <!-- Team box with team members 420 -->
@@ -194,17 +220,14 @@
             <p>Took charge of the project, steering it towards success through strategic planning and effective communication. My commitment to excellence and collaborative spirit ensured a seamless workflow, elevating the project's outcomes. Privileged to work shoulder to shoulder.</p>
         </div>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/usman-ali" target="_blank">
+            <a href="https://www.linkedin.com/in/usman-ali-456a2a282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">
                 <img src="LINKEDIN.png" alt="LinkedIn" class="social-icon">
             </a>
-            <a href="https://www.facebook.com/usman.ali" target="_blank">
-                <img src="facebook.png" alt="Facebook" class="social-icon">
-            </a>
-            <a href="https://www.instagram.com/usman_ali/" target="_blank">
+            <a href="https://www.instagram.com/itsosmanhere?igsh=MzJob3czdGY2b2Nv" target="_blank">
                 <img src="instagram.png" alt="Instagram" class="social-icon">
             </a>
-            <a href="https://twitter.com/usman_ali" target="_blank">
-                <img src="X (TWITTER).png" alt="X" class="social-icon">
+            <a href="USMAN-ALI-CV-CWC-F2023-750.html" target="_blank">
+                <button class="resume-button">Resume</button>
             </a>
         </div>
     </div>
@@ -220,17 +243,16 @@
             <a href="https://www.linkedin.com/in/basil-ali" target="_blank">
                 <img src="LINKEDIN.png" alt="LinkedIn" class="social-icon">
             </a>
-            <a href="https://www.facebook.com/basil.ali" target="_blank">
-                <img src="facebook.png" alt="Facebook" class="social-icon">
-            </a>
             <a href="https://www.instagram.com/basil_ali/" target="_blank">
                 <img src="instagram.png" alt="Instagram" class="social-icon">
             </a>
-            <a href="https://twitter.com/basil_ali" target="_blank">
-                <img src="X (TWITTER).png" alt="X" class="social-icon">
+            <a href="CV3.html" target="_blank">
+                <button class="resume-button">Resume</button>
             </a>
         </div>
     </div>
+
+
 
     <div class="member-box">
         <img src="rohma.png" alt="Member 3" class="member-image">
@@ -240,17 +262,14 @@
             <p>Contributed to the success of software development projects by actively participating in strategic planning and maintaining effective communication within the team. My dedication to code excellence and a collaborative spirit fostered a seamless development workflow, contributing to the elevated outcomes of the project. Privileged to be a key member, actively contributing to innovative solutions.</p>
         </div>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/rohma/" target="_blank">
+            <a href="https://pk.linkedin.com/in/rohma-talal-5a589a2a9" target="_blank">
                 <img src="LINKEDIN.png" alt="LinkedIn" class="social-icon">
             </a>
-            <a href="https://www.facebook.com/rohma/" target="_blank">
-                <img src="facebook.png" alt="Facebook" class="social-icon">
-            </a>
-            <a href="https://www.instagram.com/rohma_dev/" target="_blank">
+            <a href="https://www.instagram.com/rohmatalal?igsh=NGliNXlnbXExeTVu" target="_blank">
                 <img src="instagram.png" alt="Instagram" class="social-icon">
             </a>
-            <a href="https://twitter.com/rohma_dev" target="_blank">
-                <img src="X (TWITTER).png" alt="X" class="social-icon">
+            <a href="CV.html" target="_blank">
+                <button class="resume-button">Resume</button>
             </a>
         </div>
     </div>
@@ -263,17 +282,14 @@
             <p>Drove marketing initiatives forward through strategic planning and effective communication, contributing to the success of campaigns. My commitment to excellence and a collaborative approach ensured a seamless marketing workflow, elevating project outcomes. Privileged to work closely with the team, actively shaping impactful marketing strategies.</p>
         </div>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/abdul-haseeb/" target="_blank">
+            <a href="https://www.linkedin.com/in/malik-abdul-haseeb-48634a2a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
                 <img src="LINKEDIN.png" alt="LinkedIn" class="social-icon">
             </a>
-            <a href="https://www.facebook.com/abdul.haseeb/" target="_blank">
-                <img src="facebook.png" alt="Facebook" class="social-icon">
-            </a>
-            <a href="https://www.instagram.com/abdul_haseeb/" target="_blank">
+            <a href="https://www.instagram.com/haseebawan444?igsh=MTcyMDkxODV3eTZ6bg%3D%3D&utm_source=qr" target="_blank">
                 <img src="instagram.png" alt="Instagram" class="social-icon">
             </a>
-            <a href="https://twitter.com/abdul_haseeb" target="_blank">
-                <img src="X (TWITTER).png" alt="X" class="social-icon">
+            <a href="cv-3.html" target="_blank">
+                <button class="resume-button">Resume</button>
             </a>
         </div>
     </div>
@@ -293,7 +309,6 @@
     </div>
 </footer>
 
-<!-- Bootstrap JS and Popper.js CDN for button functionality -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-GLhlTQ8iKJEcdtu0I63s//Tt2uO+MzbLJq5i6T9LQFfRgkg1OfQusvfaBL5pdj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></script>
 

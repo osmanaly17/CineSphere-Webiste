@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineSphere</title>
+    <title>Select Seat</title>
     <style>
           body {
       font-family: Arial, sans-serif;
@@ -207,6 +207,20 @@
         }
 
 
+        #payment-button {
+    background-color: #17a2b8; 
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#payment-button:hover {
+    background-color: #098699;
+}
 
 
         .row {
@@ -256,8 +270,12 @@
           
         </nav>
         <div>
-            <button id="register-button">Register</button>
-            <button id="signin-button">Sign In</button>
+            <a href=".signup.html" target="_blank">
+                <button id="register-button">Register</button>
+            </a>
+            <a href=".login.html" target="_blank">
+                <button id="signin-button">Sign In</button>
+            </a>
         </div>
     </header>
 
@@ -400,6 +418,37 @@
 
         window.onload = initializeSeats;
     </script>
+
+
+
+
+
+<div style="text-align: center; margin-top: 20px;">
+    <button id="payment-button" onclick="redirectToPayment()">Proceed to Payment</button>
+</div>
+
+<script>
+    function redirectToPayment() {
+        // Check if any seats are selected
+        const selectedSeats = document.querySelectorAll('.selected');
+        if (selectedSeats.length === 0) {
+            alert('Please select at least one seat before proceeding to payment.');
+        } else {
+            // Redirect to the payment page or perform any other action
+            alert('Redirecting to payment page...');
+            // You can replace the following line with the actual URL of your payment page
+            window.location.href = '.Tickt payment page.html';
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
 
   
 

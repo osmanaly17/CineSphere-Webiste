@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000000;
+            background-color: rgb(20, 18, 18);
             display: flex;
             justify-content: space-between;
             align-items: stretch;
@@ -23,7 +23,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #000000;
+            background-color: rgb(20, 18, 18);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -53,7 +53,7 @@
         }
 
         .line {
-            width: 80%;
+            width: 50%;
             height: 1px;
             background-color: #ccc;
             margin: 15px 0;
@@ -64,7 +64,7 @@
             max-width: 400px;
             display: flex;
             justify-content: space-around;
-            align-items: le;
+            align-items: center;
         }
 
         .social-button {
@@ -100,6 +100,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-color: rgb(20, 18, 18);;
 }
 
 header img {
@@ -151,7 +152,7 @@ nav a {
 
         footer {
             width: 100%;
-            background-color: #1b1919;
+            background-color: rgb(20, 18, 18);
             color: #fff;
             text-align: center;
             padding: 20px 0;
@@ -204,8 +205,12 @@ nav a {
           
         </nav>
         <div>
-            <button id="register-button">Register</button>
-            <button id="signin-button">Sign In</button>
+            <a href=".signup.html" target="_blank">
+                <button id="register-button">Register</button>
+            </a>
+            <a href=".login.html" target="_blank">
+                <button id="signin-button">Sign In</button>
+            </a>
         </div>
     </header>
     <!-- Left Section - Login -->
@@ -216,13 +221,15 @@ nav a {
             <button type="submit">Login</button>
         </form>
         <div class="forgot-password">
-            <a href="#">Forgot Password?</a>
+            <a href=".forgot.html">Forgot Password?</a>
         </div>
-        <div class="line"></div>
+        
         <div class="social-login">
             <button class="social-button">Login with Facebook</button>
             <button class="social-button">Login with Google</button>
+            
         </div>
+        <div class="line"></div>
     </section>
 
     <!-- Middle Section - Signup -->
@@ -233,11 +240,12 @@ nav a {
             <input type="password" placeholder="Confirm Password">
             <button type="submit">Signup</button>
         </form>
-        <div class="line"></div>
+        
         <div class="social-login">
             <button class="social-button">Signup with Facebook</button>
             <button class="social-button">Signup with Google</button>
         </div>
+        <div class="line"></div>
     </section>
 
     <!-- Right Section - Image -->

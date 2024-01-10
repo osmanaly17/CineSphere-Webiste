@@ -9,11 +9,11 @@
         body {
             background-color: rgb(20, 18, 18);
             color: #fff;
-            font-family: 'Your Creative Font', 'Arial', sans-serif;
+            font-family:  'Arial', sans-serif;
             text-align: center;
             margin: 20;
-            padding: 20;
-            margin-left: 10px;
+            padding: 30px;
+            padding-top: 20px;
         }
 
         h1, h2, h3 {
@@ -91,50 +91,53 @@
         }
 
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: rgb(20, 18, 18);
-            color: #fff;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
 
-        header img {
-            max-width: 100%;
-        }
+header img {
+    max-width: 100%;
+}
 
-        nav {
-            display: flex;
-            align-items: center;
-        }
+nav {
+    display: flex;
+    align-items: center;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-        }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
 
-        /* Bootstrap button styling */
-        .btn {
-            color: #fff;
-            border: 2px solid #800000; /* Maroon */
-            border-radius: 5px;
-            cursor: pointer;
-        }
+#register-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #800000; /* Maroon */
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        .btn-primary {
-            background-color: #800000; /* Maroon */
-            border: 2px solid #800000; /* Maroon */
-            border-radius: 5px;
-            cursor: pointer;
-        }
+#signin-button {
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #800000; /* Maroon */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        /* Button hover effect */
-        .btn:hover,
-        .btn-primary:hover {
-            background-color: #800000; /* Maroon */
-            color: #fff;
-        }
+.stroke-button:hover {
+    background-color: #800000; /* Maroon */
+    color: #fff;
+}
+
+.fill-button:hover {
+    background-color: #ccc;
+}
 
         /* Align genres to the left */
         h2, p {
@@ -158,8 +161,12 @@
           
         </nav>
         <div>
-            <button id="register-button">Register</button>
-            <button id="signin-button">Sign In</button>
+            <a href=".signup.html" target="_blank">
+                <button id="register-button">Register</button>
+            </a>
+            <a href=".login.html" target="_blank">
+                <button id="signin-button">Sign In</button>
+            </a>
         </div>
     </header>
 
